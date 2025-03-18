@@ -1001,7 +1001,7 @@ do
 								BackgroundTransparency = 1,
 								RichText = true,
 								FontFace = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal),
-								Text = Options.SubTitle or "by @edek1004",
+								Text = Options.SubTitle or "by @mammoth_dc",
 								Size = UDim2.new(0, 0, 1, 0)
 							}
 						)
