@@ -1,7 +1,7 @@
 --[[
     Mammoth Drawling Library
 
-    Author: Mammoth - Comic
+    Author: @mammoth_dc
     Youtube: https://www.youtube.com/@edek1004
     Discord: https://discordapp.com/users/1332709192364068959
 --]]
