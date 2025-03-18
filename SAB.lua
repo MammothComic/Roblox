@@ -818,17 +818,24 @@ do
 		end
 
 		function t:AutoSave(value)
-			if not Options.Save then
+			if not Options.Save or not isfolder or not makefolder then
 				return
 			end
-			if Options.Save:find("/", 1, true) then
-				for ll = 1, #Options.Save:split("/") do
-					if not isfolder(Options.Save:split("/")[ll]) then
-						makefolder(Options.Save:split("/")[ll])
-					end
+			local j = {}
+			local b = {
+				path
+			}
+			if path:find("/") then
+				b = path:split("/")
+			end
+			for i = 1, # b do
+				j[i] = table.concat(b, "/", 1, i)
+			end
+			for i = 1, # j do
+				local s = j[i]
+				if not isfolder(s) then
+					makefolder(s)
 				end
-			elseif not isfolder(Options.Save) then
-				makefolder(Options.Save)
 			end
 			Library.AutoSave = value
 		end
