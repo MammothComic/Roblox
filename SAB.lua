@@ -352,6 +352,10 @@ do
 
 		t.TitleContent = Title
 		t.SubTiltleContent = SubTitle
+
+		if Configs.Lock then
+			t.Lock()
+		end
 		return t
 	end
 end
@@ -2592,6 +2596,10 @@ do
 					LockLabel.Visible = false
 				end
 
+				if l.Lock then
+					s:Lock()
+				end
+
 				return s
 			end
 
@@ -2750,6 +2758,10 @@ do
 					Locked = false
 					LockButton.Visible = false
 					LockLabel.Visible = false
+				end
+
+				if l.Lock then
+					s:Lock()
 				end
 
 				return s
